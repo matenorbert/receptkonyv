@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Receptkönyv</title>
+</head>
+
+<body>
+<form action="{{ path('login') }}" method="post">
+    Felhasználónév<br>
+    <input type="text" name="username"/><br>
+    Jelszó<br>
+    <input type="password" name="userpass"/><br>
+    <input type="hidden" name="_validation_number" value="{{ csrf_token('authenticate') }}">
+    <input type="submit" value="Belépés"/>
+</form>
+
+<div>{{ param }}</div>
+
+</body>
+
+</html>

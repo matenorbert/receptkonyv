@@ -1,0 +1,13 @@
+blogger_admin:
+    resource: "@BloggerAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+blogger_blog:
+    resource: "@BloggerBlogBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
