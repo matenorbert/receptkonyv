@@ -5,12 +5,25 @@ security:
     # http://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
         in_memory:
-            memory: ~
+          memory:
+            users:
+                admin:
+                    password: "%adminpass%"
+                    roles: 'ROLE_ADMIN'
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
             anonymous: true
+            form_login:
+              login_path: login
+              check_path: login
+              default_target_path: loginsuccess
+              failure_path: loginfailure
+              csrf_token_generator: security.csrf.token_manager
+            logout:
+              path:   /logout
+              target: /admin
         main:
             anonymous: ~
             # activate different ways to authenticate
@@ -20,3 +33,6 @@ security:
 
             # form_login: ~
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+
+    encoders:
+                Symfony\Component\Security\Core\User\User: plaintext
