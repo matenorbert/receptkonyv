@@ -18,7 +18,7 @@ security:
             form_login:
               login_path: login
               check_path: login
-              default_target_path: loginsuccess
+              default_target_path: dashboard
               failure_path: loginfailure
               csrf_token_generator: security.csrf.token_manager
             logout:
@@ -35,4 +35,7 @@ security:
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
 
     encoders:
-                Symfony\Component\Security\Core\User\User: plaintext
+      Symfony\Component\Security\Core\User\User: bcrypt
+
+    access_control:
+      - { path: ^/admin/dashboard, roles: ROLE_ADMIN }

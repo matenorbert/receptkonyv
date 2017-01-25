@@ -20,15 +20,7 @@ class LoginController extends Controller
      */
     public function loginDefault(Request $request)
     {
-        return $this->render('BloggerAdminBundle:Default:index.html.twig', array('param' => 'beléptető'));
-    }
-
-    /**
-     * @Route("/admin/loginsuccess", name="loginsuccess")
-     */
-    public function loginSuccess(Request $request)
-    {
-        return $this->render('BloggerAdminBundle:Default:dashboard.html.twig', array('username' => $this->getUser()));
+        return $this->render('BloggerAdminBundle:Default:index.html.twig', array('param' => null));
     }
 
     /**
