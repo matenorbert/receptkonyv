@@ -6,9 +6,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="Alapanyag")
+ * @ORM\Table(name="Ingredient")
  */
-class Alapanyag
+class Ingredient
 {
     /**
      * @ORM\Column(type="integer")

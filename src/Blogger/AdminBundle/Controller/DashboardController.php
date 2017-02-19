@@ -21,7 +21,7 @@ class DashboardController extends Controller
      */
     public function mainPage()
     {
-        $repository = $this->getDoctrine()->getRepository('BloggerAdminBundle:Alapanyag');
+        $repository = $this->getDoctrine()->getRepository('BloggerAdminBundle:Ingredient');
         $ingredients= $repository->findAll();
         return $this->render('BloggerAdminBundle:Default:dashboard.html.twig', array('username' => $this->getUser(), 'ingredients' => $ingredients));
     }
