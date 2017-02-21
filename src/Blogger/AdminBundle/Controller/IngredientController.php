@@ -12,6 +12,7 @@ use Blogger\AdminBundle\Entity\Ingredient;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 
@@ -31,5 +32,14 @@ class IngredientController extends Controller
         $em->flush();
 
         return $this->json(array('test' => $id));
+    }
+
+    /**
+     * @Route("admin/dashboard/ingredient/select", name="ingredient_select")
+     */
+    public function selectAction()
+    {
+        $repository = $this->getDoctrine()->getRepository('BloggerAdminBundle:Ingredient');
+        return $this->render('BloggerAdminBundle:Default:ingredient.html.twig', array('ingredients' => $repository->findAll()));
     }
 }

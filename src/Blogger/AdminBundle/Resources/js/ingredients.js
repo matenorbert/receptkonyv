@@ -5,7 +5,9 @@ $(document).ready(function(){
                 url: 'ingredient/delete/' + $(this).val(),
                 dataType: 'json',
                 success: function(resp){
-                    console.log(resp.test);
+                    $.get('ingredient/select', function(data){
+                        $('#ingredientbox').html(data);
+                    })
                 },
                 error: function(jqXHR){
                     console.log(jqXHR.status + ': ' + jqXHR.statusText);
@@ -14,3 +16,5 @@ $(document).ready(function(){
         }
     });
 });
+
+

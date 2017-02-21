@@ -18,14 +18,10 @@
     <li><a href="receptek">Receptek</a></li>
     <li><a href="/logout">Kilépés</a></li>
 </ul>
-<table border="1">
-    {% for ingredient in ingredients%}
-        <tr>
-            <td>{{  ingredient.name}}</td>
-            <td><button type="button" name="deleteingredient" value="{{ ingredient.id }}">X</button></td>
-        </tr>
-    {% endfor %}
-</table>
+
+<div id="ingredientbox">
+    {{ render(controller('BloggerAdminBundle:Ingredient:select')) }}
+</div>
 </body>
 
 </html>
