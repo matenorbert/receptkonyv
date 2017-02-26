@@ -15,6 +15,18 @@ $(document).ready(function(){
             })
         }
     });
+
+    $('[name=addingredient]').click(function(){
+        $('#ingredient_table tr:last').after('<tr><td colspan="2"><input type="text" name="ingredientfield"></td></tr>');
+    });
+
+    $('[name=saveingredient]').click(function(){
+        var ingredients = new Array();
+        $('[name=ingredientfield]').each(function(){
+            ingredients.push($(this).val());
+        });
+        console.log(ingredients);
+    })
 });
 
 

@@ -1,8 +1,10 @@
-<table border="1">
+<table border="1" id="ingredient_table">
 {% for ingredient in ingredients%}
     <tr>
-        <td>{{  ingredient.name}}</td>
+        <td><input type="text" name="ingredientfield" value="{{  ingredient.name}}"></td></td>
         <td><button type="button" name="deleteingredient" value="{{ ingredient.id }}">X</button></td>
     </tr>
 {% endfor %}
 </table>
+<button type="button" name="addingredient">+</button>
+<button type="button" name="saveingredient">Mentés</button>

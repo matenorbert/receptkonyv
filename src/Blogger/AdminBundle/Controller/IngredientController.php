@@ -42,4 +42,9 @@ class IngredientController extends Controller
         $repository = $this->getDoctrine()->getRepository('BloggerAdminBundle:Ingredient');
         return $this->render('BloggerAdminBundle:Default:ingredient.html.twig', array('ingredients' => $repository->findAll()));
     }
+
+    public function modify($id)
+    {
+
+    }
 }
