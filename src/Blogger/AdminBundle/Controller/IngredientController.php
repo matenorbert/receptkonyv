@@ -61,8 +61,42 @@ class IngredientController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($ingredient);
             $em->flush();
+
+            $res['ret'] = true;
         }catch(\Exception $e){
-            echo $e->getMessage();
-        }exit;
+            $res['ret'] = false;
+            $res['error'] = $e->getMessage();
+        }
+
+        return $this->json($res);
+    }
+
+    /**
+     * @Route("admin/dashboard/ingredient/update", name="ingredient_update")
+     */
+    public function update(Request $request)
+    {
+        try{
+            $name = $request->request->get('name');
+            $id = $request->request->get('id');
+
+            if(!$name || !$id)
+            {
+                throw new \Exception('Missing parameter!');
+            }
+
+            $em = $this->getDoctrine()->getManager();
+            $ingredient = $this->getDoctrine()->getRepository('BloggerAdminBundle:Ingredient')->find($id);
+            $ingredient->setName($name);
+            $em->persist($ingredient);
+            $em->flush();
+
+            $res['ret'] = true;
+        }catch(\Exception $e){
+            $res['ret'] = false;
+            $res['error'] = $e->getMessage();
+        }
+
+        return $this->json($res);
     }
 }
