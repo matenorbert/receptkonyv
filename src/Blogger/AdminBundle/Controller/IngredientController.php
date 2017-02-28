@@ -14,6 +14,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 class IngredientController extends Controller
@@ -43,8 +44,25 @@ class IngredientController extends Controller
         return $this->render('BloggerAdminBundle:Default:ingredient.html.twig', array('ingredients' => $repository->findAll()));
     }
 
-    public function modify($id)
+    /**
+     * @Route("admin/dashboard/ingredient/create", name="ingredient_create")
+     */
+    public function create(Request $request)
     {
+        try{
+            $name = $request->request->get('name');
 
+            if(!$name){
+                throw new \Exception('Missing name parameter!');
+            }
+
+            $ingredient = new Ingredient();
+            $ingredient->setName($name);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($ingredient);
+            $em->flush();
+        }catch(\Exception $e){
+            echo $e->getMessage();
+        }exit;
     }
 }

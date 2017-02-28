@@ -3,10 +3,12 @@
 namespace Blogger\AdminBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="Ingredient")
+ * @UniqueEntity("name")
  */
 class Ingredient
 {
@@ -18,7 +20,7 @@ class Ingredient
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=50)
+     * @ORM\Column(type="string", length=50, unique=true)
      */
     private $name;
 
@@ -37,7 +39,7 @@ class Ingredient
      *
      * @param string $name
      *
-     * @return Alapanyag
+     * @return Ingredient
      */
     public function setName($name)
     {
