@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('[name=deleteingredient]').click(function(){
+    $('body').on('click', '[name=deleteingredient]', function(){
         if(confirm('Biztosan törlöd?')){
             $.ajax({
                 url: 'ingredient/delete/' + $(this).val(),
@@ -16,19 +16,28 @@ $(document).ready(function(){
         }
     });
 
-    $('[name=addingredient]').click(function(){
+    $('body').on('click', '[name=addingredient]', function(){
         $('#ingredient_table tr:last').after('<tr><td colspan="2"><input type="text" name="ingredientfield"></td></tr>');
     });
 
-    $('[name=saveingredient]').click(function(){
+    $('body').on('click', '[name=saveingredient]', function(){
         var ingredients = new Array();
         $('[name=ingredientfield]').each(function(){
-            ingredients.push($(this).val());
+            $(this).css('background-color', 'white');
+
+            if(!$(this).val()) {
+                $(this).css('background-color', 'red');
+                alert('Igredient name is mandatory!');
+                return false;
+            }
+            ingredients.push({name: $(this).val(), id: $(this).attr('data-id')});
         });
 
         $.ajax({
-            url: 'ingredient/delete/' + $(this).val(),
+            url: 'ingredient/editAll',
+            method: 'POST',
             dataType: 'json',
+            data: {'rows' : ingredients},
             success: function(resp){
                 $.get('ingredient/select', function(data){
                     $('#ingredientbox').html(data);

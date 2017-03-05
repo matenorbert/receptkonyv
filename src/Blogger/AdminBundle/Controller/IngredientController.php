@@ -87,12 +87,60 @@ class IngredientController extends Controller
 
             $em = $this->getDoctrine()->getManager();
             $ingredient = $this->getDoctrine()->getRepository('BloggerAdminBundle:Ingredient')->find($id);
+
+            if(!$ingredient)
+            {
+                throw new \Exception('Selected ingredient not found!');
+            }
+
             $ingredient->setName($name);
             $em->persist($ingredient);
             $em->flush();
 
             $res['ret'] = true;
         }catch(\Exception $e){
+            $res['ret'] = false;
+            $res['error'] = $e->getMessage();
+        }
+
+        return $this->json($res);
+    }
+
+    /**
+     * @Route("admin/dashboard/ingredient/editAll", name="ingredient_editall")
+     */
+    public function editAll(Request $request)
+    {
+        $rows = $request->request->get('rows');
+
+        if(!$rows || !is_array($rows))
+        {
+            throw new \Exception('Wrong parameter!');
+        }
+
+        try
+        {
+            foreach($rows as $row)
+            {
+                if(isset($row['id']))
+                {
+                    $ingredient = $this->getDoctrine()->getRepository('BloggerAdminBundle:Ingredient')->find($row['id']);
+                }
+                else
+                {
+                    $ingredient = new Ingredient();
+                }
+                $ingredient->setName($row['name']);
+            }
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($ingredient);
+            $em->flush();
+
+            $res['ret'] = true;
+        }
+        catch(\Exception $e)
+        {
             $res['ret'] = false;
             $res['error'] = $e->getMessage();
         }

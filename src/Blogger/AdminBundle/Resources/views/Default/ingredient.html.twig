@@ -1,8 +1,12 @@
 <table border="1" id="ingredient_table">
 {% for ingredient in ingredients%}
     <tr>
-        <td><input type="text" name="ingredientfield" value="{{  ingredient.name}}"></td></td>
-        <td><button type="button" name="deleteingredient" value="{{ ingredient.id }}">X</button></td>
+        <td>
+            <input type="text" name="ingredientfield" data-id="{{ ingredient.id }}" value="{{  ingredient.name}}">
+        </td>
+        <td>
+            <button type="button" name="deleteingredient" value="{{ ingredient.id }}">X</button>
+        </td>
     </tr>
 {% endfor %}
 </table>
