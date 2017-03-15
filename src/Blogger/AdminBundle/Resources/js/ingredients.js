@@ -39,6 +39,10 @@ $(document).ready(function(){
             dataType: 'json',
             data: {'rows' : ingredients},
             success: function(resp){
+                if(resp.ret !== true) {
+                    alert(resp.error);
+                    return false;
+                }
                 $.get('ingredient/select', function(data){
                     $('#ingredientbox').html(data);
                 })

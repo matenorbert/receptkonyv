@@ -120,6 +120,8 @@ class IngredientController extends Controller
 
         try
         {
+            $em = $this->getDoctrine()->getManager();
+
             foreach($rows as $row)
             {
                 if(isset($row['id']))
@@ -130,10 +132,11 @@ class IngredientController extends Controller
                 {
                     $ingredient = new Ingredient();
                 }
+
                 $ingredient->setName($row['name']);
+                $em->persist($ingredient);
             }
 
-            $em = $this->getDoctrine()->getManager();
             $em->persist($ingredient);
             $em->flush();
 
