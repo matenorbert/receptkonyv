@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <title>Receptkönyv</title>
 
+    {% stylesheets
+    '@BloggerAdminBundle/Resources/css/receipt.css'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
     {% javascripts
     'js/jquery-3.1.1.min.js'
     '@BloggerAdminBundle/Resources/js/ingredients.js'
+    '@BloggerAdminBundle/Resources/js/receipt.js'
     %}
     <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
@@ -33,10 +40,31 @@
     <li><a href="/logout">Kilépés</a></li>
 </ul>
 
-<form method="POST" action="teszt.php">
-    <textarea name="szovegmezo"></textarea>
-    <input type="submit" value="küldés">
-</form>
+<div id="receiptbox">
+    <div>Új recept hozzáadása</div>
+    <div>Recept neve: <input type="text" name="receipt_name"></div>
+    <div id="ingredients">
+        Alapanyagok:<br>
+        <div class="ingredientrow">
+            <select name="ingredient[]" class="ingredient">
+                {% for ingredient in ingredients%}
+                    <option value="{{ ingredient.id }}">{{ ingredient.name }}</option>
+                {% endfor %}
+            </select>
+            <input type="text" name="piece[]" value="1">
+            <select name="unit[]">
+                <option value="db">db</option>
+                <option value="dkg">dkg</option>
+            </select>
+        </div>
+        <button type="button" name="addingredient">+</button>
+    </div>
+    <form method="POST" action="teszt.php">
+        <textarea name="szovegmezo"></textarea>
+        <input type="submit" value="küldés">
+    </form>
+</div>
+
 </body>
 
 </html>
