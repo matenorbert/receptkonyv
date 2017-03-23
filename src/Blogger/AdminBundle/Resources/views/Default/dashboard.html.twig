@@ -10,18 +10,33 @@
     %}
     <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
+    <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: [
+                'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+                'searchreplace wordcount visualblocks visualchars code fullscreen',
+                'insertdatetime media nonbreaking save table contextmenu directionality',
+                'emoticons template paste textcolor colorpicker textpattern imagetools codesample toc'
+            ],
+            toolbar1: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+            toolbar2: 'print preview media | forecolor backcolor emoticons | codesample',
+        });
+    </script>
 </head>
 
 <body>
 <ul>
-    <li>Alapanyagok</li>
+    <li><a href="ingredient">Alapanyagok</a></li>
     <li><a href="receptek">Receptek</a></li>
     <li><a href="/logout">Kilépés</a></li>
 </ul>
 
-<div id="ingredientbox">
-    {{ render(controller('BloggerAdminBundle:Ingredient:select')) }}
-</div>
+<form method="POST" action="teszt.php">
+    <textarea name="szovegmezo"></textarea>
+    <input type="submit" value="küldés">
+</form>
 </body>
 
 </html>

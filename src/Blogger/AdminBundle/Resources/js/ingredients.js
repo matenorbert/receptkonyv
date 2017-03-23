@@ -5,9 +5,7 @@ $(document).ready(function(){
                 url: 'ingredient/delete/' + $(this).val(),
                 dataType: 'json',
                 success: function(resp){
-                    $.get('ingredient/select', function(data){
-                        $('#ingredientbox').html(data);
-                    })
+                    location.reload();
                 },
                 error: function(jqXHR){
                     console.log(jqXHR.status + ': ' + jqXHR.statusText);
@@ -43,9 +41,7 @@ $(document).ready(function(){
                     alert(resp.error);
                     return false;
                 }
-                $.get('ingredient/select', function(data){
-                    $('#ingredientbox').html(data);
-                })
+                location.reload();
             },
             error: function(jqXHR){
                 console.log(jqXHR.status + ': ' + jqXHR.statusText);

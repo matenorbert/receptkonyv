@@ -1,3 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Receptkönyv</title>
+
+    {% javascripts
+    'js/jquery-3.1.1.min.js'
+    '@BloggerAdminBundle/Resources/js/ingredients.js'
+    %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    <script src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: [
+                'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+                'searchreplace wordcount visualblocks visualchars code fullscreen',
+                'insertdatetime media nonbreaking save table contextmenu directionality',
+                'emoticons template paste textcolor colorpicker textpattern imagetools codesample toc'
+            ],
+            toolbar1: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+            toolbar2: 'print preview media | forecolor backcolor emoticons | codesample',
+        });
+    </script>
+</head>
+
+<body>
+
 <table border="1" id="ingredient_table">
 {% for ingredient in ingredients%}
     <tr>
@@ -12,3 +42,7 @@
 </table>
 <button type="button" name="addingredient">+</button>
 <button type="button" name="saveingredient">Mentés</button>
+
+</body>
+
+</html>

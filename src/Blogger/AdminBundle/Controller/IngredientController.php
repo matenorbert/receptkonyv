@@ -36,7 +36,7 @@ class IngredientController extends Controller
     }
 
     /**
-     * @Route("admin/dashboard/ingredient/select", name="ingredient_select")
+     * @Route("admin/dashboard/ingredient", name="ingredient_select")
      */
     public function selectAction()
     {
