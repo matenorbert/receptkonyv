@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6abd504-31ed-4150-8a93-677d80628481" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/js/receipt.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../index.php" afterPath="$PROJECT_DIR$/../index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/js/receipt.js" afterPath="$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/js/receipt.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/views/Default/dashboard.html.twig" afterPath="$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/views/Default/dashboard.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../test1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../test1/.idea/workspace.xml" />
     </list>
@@ -28,8 +28,8 @@
       <file leaf-file-name="dashboard.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/views/Default/dashboard.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="58" column="14" lean-forward="true" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
+            <state relative-caret-position="258">
+              <caret line="57" column="44" lean-forward="false" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -38,8 +38,8 @@
       <file leaf-file-name="receipt.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/js/receipt.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+            <state relative-caret-position="34">
+              <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -49,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Controller/DashboardController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="25" column="146" lean-forward="false" selection-start-line="25" selection-start-column="134" selection-end-line="25" selection-end-column="146" />
+              <caret line="25" column="148" lean-forward="false" selection-start-line="25" selection-start-column="148" selection-end-line="25" selection-end-column="148" />
               <folding />
             </state>
           </provider>
@@ -68,8 +68,8 @@
       <file leaf-file-name="Ingredient.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Entity/Ingredient.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+            <state relative-caret-position="1003">
+              <caret line="59" column="1" lean-forward="false" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
               <folding>
                 <element signature="e#46#78#0#PHP" expanded="true" />
               </folding>
@@ -80,7 +80,7 @@
       <file leaf-file-name="IngredientController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Controller/IngredientController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="561">
               <caret line="38" column="41" lean-forward="false" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
               <folding>
                 <element signature="e#135#177#0#PHP" expanded="true" />
@@ -92,7 +92,7 @@
       <file leaf-file-name="ingredient.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/views/Default/ingredient.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="251">
               <caret line="34" column="82" lean-forward="false" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="82" />
               <folding />
             </state>
@@ -102,8 +102,8 @@
       <file leaf-file-name="ingredients.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/js/ingredients.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="7" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="18" selection-end-column="7" />
+            <state relative-caret-position="629">
+              <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -174,7 +174,6 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/Blogger/AdminBundle/Controller/DashboardController.php" />
         <option value="$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/views/Default/ingredient.html.twig.html" />
         <option value="$PROJECT_DIR$/var/logs/dev.log" />
         <option value="$PROJECT_DIR$/src/Blogger/AdminBundle/Entity/Ingredient.php" />
@@ -184,6 +183,7 @@
         <option value="$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/js/ingredients.js" />
         <option value="$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/css/receipt.css" />
         <option value="$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/js/receipt.js" />
+        <option value="$PROJECT_DIR$/src/Blogger/AdminBundle/Controller/DashboardController.php" />
         <option value="$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/views/Default/dashboard.html.twig" />
       </list>
     </option>
@@ -743,12 +743,13 @@
       <workItem from="1490193650983" duration="2547000" />
       <workItem from="1490255669545" duration="3644000" />
       <workItem from="1490281437407" duration="217000" />
-      <workItem from="1490292439603" duration="5149000" />
+      <workItem from="1490292439603" duration="5328000" />
+      <workItem from="1491119060708" duration="8883000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127335000" />
+    <option name="totallyTimeSpent" value="136397000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1043,7 +1044,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="15" column="118" lean-forward="false" selection-start-line="15" selection-start-column="118" selection-end-line="15" selection-end-column="118" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/logs/dev.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-161985">
+          <caret line="2176" column="0" lean-forward="false" selection-start-line="2176" selection-start-column="0" selection-end-line="2176" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1063,10 +1070,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Controller/IngredientController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="38" column="41" lean-forward="false" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+          <folding>
+            <element signature="e#135#177#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Entity/Ingredient.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+        <state relative-caret-position="1003">
+          <caret line="59" column="1" lean-forward="false" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
           <folding>
             <element signature="e#46#78#0#PHP" expanded="true" />
           </folding>
@@ -1081,10 +1098,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/var/logs/dev.log">
+    <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/js/ingredients.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-161985">
-          <caret line="2176" column="0" lean-forward="false" selection-start-line="2176" selection-start-column="0" selection-end-line="2176" selection-end-column="0" />
+        <state relative-caret-position="629">
+          <caret line="37" column="40" lean-forward="false" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/js/receipt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/views/Default/ingredient.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="34" column="82" lean-forward="false" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="82" />
           <folding />
         </state>
       </provider>
@@ -1092,49 +1125,15 @@
     <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Controller/DashboardController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="25" column="146" lean-forward="false" selection-start-line="25" selection-start-column="134" selection-end-line="25" selection-end-column="146" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Controller/IngredientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="38" column="41" lean-forward="false" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
-          <folding>
-            <element signature="e#135#177#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/views/Default/ingredient.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="34" column="82" lean-forward="false" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/js/ingredients.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="7" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="18" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/js/receipt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <caret line="25" column="148" lean-forward="false" selection-start-line="25" selection-start-column="148" selection-end-line="25" selection-end-column="148" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Blogger/AdminBundle/Resources/views/Default/dashboard.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="58" column="14" lean-forward="true" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
+        <state relative-caret-position="258">
+          <caret line="57" column="44" lean-forward="false" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
           <folding />
         </state>
       </provider>

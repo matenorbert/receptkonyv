@@ -43,6 +43,13 @@
 <div id="receiptbox">
     <div>Új recept hozzáadása</div>
     <div>Recept neve: <input type="text" name="receipt_name"></div>
+    <div>Adag:
+        <select name="servings">
+            {% for i in 1..10 %}
+                <option value="{{ i }}">{{ i }}</option>
+            {% endfor %}
+        </select>
+    </div>
     <div id="ingredients">
         Alapanyagok:<br>
         <div class="ingredientrow">
@@ -57,7 +64,7 @@
                 <option value="dkg">dkg</option>
             </select>
         </div>
-        <button type="button" name="addingredient">+</button>
+        <button type="button" name="receipt_addingredient">+</button>
     </div>
     <form method="POST" action="teszt.php">
         <textarea name="szovegmezo"></textarea>
